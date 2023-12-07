@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4abed62a-dfb1-4495-884f-900c98ae783c" name="Changes" comment="# Task 1 done">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Memory model in Java. Syntax for working with classes in Java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tasks/T1/Human.java" afterDir="false" />
+    <list default="true" id="4abed62a-dfb1-4495-884f-900c98ae783c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Tasks/T2/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tasks/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/T1/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tasks/T1/Human.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +52,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/blazh/IdeaProjects/Memory model in Java. Syntax for working with classes in Java/src/Main.java",
-    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
+    "settings.editor.selected.configurable": "ml.llm.AIAssistantPromptsLibrary",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -84,8 +79,18 @@
       <workItem from="1701872421371" duration="97000" />
       <workItem from="1701872534171" duration="12657000" />
       <workItem from="1701894185737" duration="104000" />
-      <workItem from="1701934086094" duration="2269000" />
+      <workItem from="1701934086094" duration="5080000" />
+      <workItem from="1701939927317" duration="16906000" />
     </task>
+    <task id="LOCAL-00001" summary="# Add Human class and configure project settings&#10;&#10;Implemented a Human class with relevant methods and attributes. Also, configuration files for IntelliJ IDEA were added including .idea/workspace.xml, .idea/vcs.xml, .idea/misc.xml, .gitignore and .idea/modules.xml files. Various project settings like auto import, task manager, project ID, and language level were set. In addition, generated a MainTest.java for testing.">
+      <option name="closed" value="true" />
+      <created>1701937895046</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701937895046</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,7 +98,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="# Task 1 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="# Task 1 done" />
+    <MESSAGE value="# Add Human class and configure project settings&#10;&#10;Implemented a Human class with relevant methods and attributes. Also, configuration files for IntelliJ IDEA were added including .idea/workspace.xml, .idea/vcs.xml, .idea/misc.xml, .gitignore and .idea/modules.xml files. Various project settings like auto import, task manager, project ID, and language level were set. In addition, generated a MainTest.java for testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

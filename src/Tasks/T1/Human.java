@@ -1,19 +1,36 @@
 package Tasks.T1;
 
 import java.time.LocalDate;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
+
+import Tasks.Validator;
 
 /**
  * This Human class represents a human.
- * It follows Java Code Conventions and OOP principles.
  */
 public class Human {
+    /**
+     * Full name of the human.
+     */
     private String fullName;
+    /**
+     * Date of birth of the human.
+     */
     private LocalDate birthDate;
+    /**
+     * Phone number of the human.
+     */
     private String phoneNumber;
+    /**
+     * City where the human resides.
+     */
     private String city;
+    /**
+     * Country where the human resides.
+     */
     private String country;
+    /**
+     * Home address of the human.
+     */
     private String homeAddress;
 
     /**
@@ -27,12 +44,12 @@ public class Human {
      * @param homeAddress a human's home address.
      */
     public Human(String fullName, LocalDate birthDate, String phoneNumber, String city, String country, String homeAddress) {
-        this.setFullName(fullName);
-        this.setBirthDate(birthDate);
-        this.setPhoneNumber(phoneNumber);
-        this.setCity(city);
-        this.setCountry(country);
-        this.setHomeAddress(homeAddress);
+        this.fullName = Validator.validateString(fullName, "Incorrect full name!");
+        this.birthDate = Validator.validateDate(birthDate);
+        this.phoneNumber = Validator.validateTelephoneNumber(phoneNumber);
+        this.city = Validator.validateString(city, "Incorrect city name!");
+        this.country = Validator.validateString(country, "Incorrect country name!");
+        this.homeAddress = Validator.validateString(homeAddress, "Incorrect home address!");
     }
 
     /**
@@ -51,7 +68,7 @@ public class Human {
      * @param fullName the full name to be set.
      */
     public void setFullName(String fullName) {
-        this.fullName = this.validateString(fullName, "Incorrect full name!");
+        this.fullName = Validator.validateString(fullName, "Incorrect full name!");
     }
 
     /**
@@ -70,7 +87,7 @@ public class Human {
      * @param birthDate the birthdate to be set.
      */
     public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = this.validateDate(birthDate);
+        this.birthDate = Validator.validateDate(birthDate);
     }
 
     /**
@@ -89,11 +106,7 @@ public class Human {
      * @param phoneNumber the phone number to be set.
      */
     public void setPhoneNumber(String phoneNumber) {
-        phoneNumber = this.validateString(phoneNumber, "Phone number cannot be empty!");
-        if (!isValidPhoneNumber(phoneNumber)) {
-            throw new IllegalStateException("Invalid phone number!");
-        }
-        this.phoneNumber = phoneNumber;
+        this.phoneNumber = Validator.validateTelephoneNumber(phoneNumber);
     }
 
     /**
@@ -112,7 +125,7 @@ public class Human {
      * @param city the city to be set.
      */
     public void setCity(String city) {
-        this.city = this.validateString(city, "Incorrect city!");
+        this.city = Validator.validateString(city, "Incorrect city name!");
     }
 
     /**
@@ -131,7 +144,7 @@ public class Human {
      * @param country the country to be set.
      */
     public void setCountry(String country) {
-        this.country = this.validateString(country, "Incorrect country!");
+        this.country = Validator.validateString(country, "Incorrect country name!");
     }
 
     /**
@@ -150,49 +163,7 @@ public class Human {
      * @param homeAddress the home address to be set.
      */
     public void setHomeAddress(String homeAddress) {
-        this.homeAddress = this.validateString(homeAddress, "Incorrect home address!");
-    }
-
-    /**
-     * A helper method to validate the input for string properties.
-     * It throws an IllegalStateException when the provided string is null or empty.
-     *
-     * @param input The string to be validated.
-     * @param errorMessage The error message to be returned if validation fails.
-     * @return String the input string if it passes validation.
-     */
-    private String validateString(String input, String errorMessage) {
-        if (input == null || input.trim().isEmpty()) {
-            throw new IllegalStateException(errorMessage);
-        }
-        return input;
-    }
-
-    /**
-     * A helper method to validate the input for date properties.
-     * It throws an IllegalStateException when the provided date is null or in the future.
-     *
-     * @param date The date to be validated.
-     * @return LocalDate the input date if it passes validation.
-     */
-    private LocalDate validateDate(LocalDate date) {
-        if (date == null || date.isAfter(LocalDate.now())) {
-            throw new IllegalStateException("Incorrect birth date!");
-        }
-        return date;
-    }
-
-    /**
-     * A helper method to check if the provided phone number is valid.
-     *
-     * @param phoneNumber The phone number to be validated.
-     * @return boolean true if phone number is valid, false otherwise.
-     */
-    private boolean isValidPhoneNumber(String phoneNumber) {
-        String regex = "^\\+38(050|063|066|073|091|092|093|094|095|096|097|098|099)\\d{7}$";
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(phoneNumber);
-        return matcher.find();
+        this.homeAddress = Validator.validateString(homeAddress, "Incorrect home address!");
     }
 
     /**
@@ -202,6 +173,13 @@ public class Human {
      */
     @Override
     public String toString() {
-        return "Human{" + "fullName='" + fullName + '\'' + ", birthDate=" + birthDate + ", phoneNumber='" + phoneNumber + '\'' + ", city='" + city + '\'' + ", country='" + country + '\'' + ", homeAddress='" + homeAddress + '\'' + '}';
+        return "Human {" +
+                "fullName='" + fullName + '\'' +
+                ", birthDate=" + birthDate +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                ", homeAddress='" + homeAddress + '\'' +
+                '}';
     }
 }
