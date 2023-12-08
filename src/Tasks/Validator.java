@@ -1,6 +1,7 @@
 package Tasks;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Validator {
     /**
@@ -120,6 +121,27 @@ public class Validator {
     public static String validateString(String input, String errorMessage) {
         if (input == null || input.trim().isEmpty()) {
             throw new IllegalStateException(errorMessage);
+        }
+        return input;
+    }
+
+    /**
+     * Overloaded helper method to validate the input for list of strings.
+     * It throws an IllegalStateException when the provided list is null, contains null,
+     * or contains an empty or whitespace-only string.
+     *
+     * @param input        The list of strings to be validated.
+     * @param errorMessage The error message to be returned if validation fails.
+     * @return List<String> the input list if it passes validation.
+     */
+    public static List<String> validateString(List<String> input, String errorMessage) {
+        if (input == null) {
+            throw new IllegalStateException(errorMessage);
+        }
+        for (String str : input) {
+            if (str == null || str.trim().isEmpty()) {
+                throw new IllegalStateException(errorMessage);
+            }
         }
         return input;
     }
