@@ -170,14 +170,7 @@ public class City {
      */
     @Override
     public String toString() {
-        return "City{" +
-                "cityName='" + cityName + '\'' +
-                ", regionName='" + regionName + '\'' +
-                ", countryName='" + countryName + '\'' +
-                ", population=" + population +
-                ", postalCode='" + postalCode + '\'' +
-                ", telephoneCode='" + telephoneCode + '\'' +
-                '}';
+        return "City{name='" + cityName + "', region='" + regionName + "', country='" + countryName + "', population=" + population + ", postalCode=" + postalCode + ", telCode='" + telephoneCode + "'}";
     }
 }
 

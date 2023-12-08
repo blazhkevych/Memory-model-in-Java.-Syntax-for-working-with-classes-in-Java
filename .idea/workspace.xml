@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4abed62a-dfb1-4495-884f-900c98ae783c" name="Changes" comment="# Introduced new Validator and Country classes&#10;&#10;The codebase has been updated with a new Validator class used to centralize logic for validating different types of inputs. A new Country class has also been implemented along with corresponding fields and methods.">
-      <change afterPath="$PROJECT_DIR$/src/Tasks/T4/Fraction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tasks/T5/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tasks/T6/Car.java" afterDir="false" />
+    <list default="true" id="4abed62a-dfb1-4495-884f-900c98ae783c" name="Changes" comment="Introduced new Validator, Book, Fraction, and Car classes&#10;&#10;Added a new Validator class for universal input validation and updated current classes to utilize this validator. Introduced new classes - Book, Fraction, and Car, with corresponding fields and methods. Updated tasks.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tasks/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/T2/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tasks/T2/City.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,25 +50,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/blazh/IdeaProjects/Memory model in Java. Syntax for working with classes in Java/src/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.AIAssistantPromptsLibrary&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MainTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/blazh/IdeaProjects/Memory model in Java. Syntax for working with classes in Java/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "ml.llm.AIAssistantPromptsLibrary",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Tasks" />
@@ -98,7 +100,7 @@
       <workItem from="1701939927317" duration="21070000" />
       <workItem from="1702023733093" duration="4702000" />
       <workItem from="1702029882153" duration="4200000" />
-      <workItem from="1702037931199" duration="3470000" />
+      <workItem from="1702037931199" duration="11037000" />
     </task>
     <task id="LOCAL-00001" summary="# Add Human class and configure project settings&#10;&#10;Implemented a Human class with relevant methods and attributes. Also, configuration files for IntelliJ IDEA were added including .idea/workspace.xml, .idea/vcs.xml, .idea/misc.xml, .gitignore and .idea/modules.xml files. Various project settings like auto import, task manager, project ID, and language level were set. In addition, generated a MainTest.java for testing.">
       <option name="closed" value="true" />
@@ -124,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702026386222</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Introduced new Validator, Book, Fraction, and Car classes&#10;&#10;Added a new Validator class for universal input validation and updated current classes to utilize this validator. Introduced new classes - Book, Fraction, and Car, with corresponding fields and methods. Updated tasks.">
+      <option name="closed" value="true" />
+      <created>1702041538171</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702041538171</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,7 +147,9 @@
     <MESSAGE value="# " />
     <MESSAGE value="Introduced new Validator and Country classes&#10;&#10;The codebase has been updated with a new Validator class used to centralize logic for validating different types of inputs. A new Country class has also been implemented along with corresponding fields and methods." />
     <MESSAGE value="# Introduced new Validator and Country classes&#10;&#10;The codebase has been updated with a new Validator class used to centralize logic for validating different types of inputs. A new Country class has also been implemented along with corresponding fields and methods." />
-    <option name="LAST_COMMIT_MESSAGE" value="# Introduced new Validator and Country classes&#10;&#10;The codebase has been updated with a new Validator class used to centralize logic for validating different types of inputs. A new Country class has also been implemented along with corresponding fields and methods." />
+    <MESSAGE value="#" />
+    <MESSAGE value="Introduced new Validator, Book, Fraction, and Car classes&#10;&#10;Added a new Validator class for universal input validation and updated current classes to utilize this validator. Introduced new classes - Book, Fraction, and Car, with corresponding fields and methods. Updated tasks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduced new Validator, Book, Fraction, and Car classes&#10;&#10;Added a new Validator class for universal input validation and updated current classes to utilize this validator. Introduced new classes - Book, Fraction, and Car, with corresponding fields and methods. Updated tasks." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
