@@ -159,4 +159,81 @@ public class Validator {
         }
         return date;
     }
+
+    /**
+     * Validates the year.
+     *
+     * @param year the year to be validated
+     * @return true if the year is valid, false otherwise
+     * @throws IllegalArgumentException if the year is less than or equal to 0
+     */
+    public static boolean isValidYear(int year) {
+        if (year <= 0) {
+            throw new IllegalArgumentException("Year must be a positive integer.");
+        }
+
+        // Assuming the book cannot be published in the future,
+        // the year should also not be greater than the current year.
+        int currentYear = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR);
+        if (year > currentYear) {
+            throw new IllegalArgumentException("Year cannot be in the future.");
+        }
+
+        return true;
+    }
+
+    /**
+     * Validates the year and returns it if it is valid.
+     *
+     * @param year the year to be validated
+     * @return the validated year
+     * @throws IllegalArgumentException if the year is less than or equal to 0 or greater than the current year
+     */
+    public static int validateYear(int year) {
+        if (year <= 0) {
+            throw new IllegalArgumentException("Year must be a positive integer.");
+        }
+
+        int currentYear = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR);
+        if (year > currentYear) {
+            throw new IllegalArgumentException("Year cannot be in the future.");
+        }
+
+        return year;
+    }
+
+    /**
+     * Validates the number of pages in the book.
+     *
+     * @param numberOfPages the number of pages to be validated
+     * @return true if the number of pages is valid, false otherwise
+     * @throws IllegalArgumentException if the numberOfPages is less than or equal to 0
+     */
+    public static boolean isValidNumberOfPages(int numberOfPages) {
+        if (numberOfPages <= 0) {
+            throw new IllegalArgumentException("Number of pages must be a positive integer.");
+        }
+        return true;
+    }
+
+    /**
+     * Validates the engine capacity.
+     *
+     * @param engineCapacity the engine capacity to be validated
+     * @return the validated engine capacity
+     * @throws IllegalArgumentException if the engine capacity is less than or equal to 0 or beyond a sensible limit
+     */
+    public static double validateEngineCapacity(double engineCapacity) {
+        if (engineCapacity <= 0) {
+            throw new IllegalArgumentException("Engine Capacity must be a positive value.");
+        }
+
+        // Assuming the engine capacity for current cars doesn't exceed certain sensible limit (let's say 10L as a generic limit),
+        // the engineCapacity should also not be larger than this limit.
+        if (engineCapacity > 10) {
+            throw new IllegalArgumentException("Engine Capacity should not exceed the top limit.");
+        }
+
+        return engineCapacity;
+    }
 }
